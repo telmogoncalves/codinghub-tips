@@ -24,10 +24,11 @@ export default function Tip({ allTips, darkMode, listView }) {
     }
   }) => (
     <div className="tip-content">
+      <span className="language-tag">
+        {language}
+      </span>
+
       <h3>
-        <span className="language-tag">
-          {language}
-        </span>
         {title}
       </h3>
 

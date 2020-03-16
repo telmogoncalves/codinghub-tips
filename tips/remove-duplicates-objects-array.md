@@ -1,5 +1,6 @@
 ---
 title: "Remove duplicates from an array of objects"
+language: "javascript"
 ---
 
 const array = [

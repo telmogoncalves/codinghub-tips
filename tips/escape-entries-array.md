@@ -1,5 +1,6 @@
 ---
 title: "Escape entries while destructuring an array"
+language: "javascript"
 ---
 
 const details = ["33", "Telmo", "@telmo"]

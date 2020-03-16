@@ -33,7 +33,7 @@ function Layout({ children }) {
     <div className={`theme--${darkMode ? `dark` : 'light'}`}>
       <Head>
         <link rel="stylesheet" href="https://use.typekit.net/hxw8tgn.css" />
-        <title>🔥 JS Tips</title>
+        <title>🔥 Wee Tips</title>
       </Head>
 
       <div className="theme-switch" onClick={() => setDarkMode(!darkMode)}>
@@ -42,7 +42,7 @@ function Layout({ children }) {
 
       <div>
         <h2 className="title">
-          <div dangerouslySetInnerHTML={{ __html: `{ js<span>tips</span> }` }} />
+          <div dangerouslySetInnerHTML={{ __html: `{ wee<span>tips</span> }` }} />
         </h2>
 
         {manipulatedChildren}

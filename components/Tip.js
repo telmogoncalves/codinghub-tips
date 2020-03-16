@@ -7,7 +7,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 export default function Tip({
   document: {
     content,
-    data: { title }
+    data: { title, language }
   },
   randomizeTip,
   darkMode
@@ -21,7 +21,12 @@ export default function Tip({
 
   return (
     <div className="tip-content">
-      <h3>{title}</h3>
+      <h3>
+        <span className="language-tag">
+          {language}
+        </span>
+        {title}
+      </h3>
 
       <div className="copy-to-clipboard">
         <CopyToClipboard
@@ -32,7 +37,7 @@ export default function Tip({
         </CopyToClipboard>
       </div>
 
-      <SyntaxHighlighter language="javascript" style={darkMode ? anOldHope : github}>
+      <SyntaxHighlighter language={language} style={darkMode ? anOldHope : github}>
         {content}
       </SyntaxHighlighter>
 

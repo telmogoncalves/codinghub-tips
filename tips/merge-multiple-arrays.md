@@ -1,5 +1,6 @@
 ---
 title: "Merge multiple arrays"
+language: "javascript"
 ---
 
 const frameworks = ['React', 'VueJS', 'Angular']

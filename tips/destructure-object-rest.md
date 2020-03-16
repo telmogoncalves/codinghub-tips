@@ -1,5 +1,6 @@
 ---
 title: "Destructure object using rest"
+language: "javascript"
 ---
 
 const profile = {

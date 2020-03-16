@@ -1,5 +1,6 @@
 ---
 title: "Assign default values while destructuring"
+language: "javascript"
 ---
 
 const profile = {

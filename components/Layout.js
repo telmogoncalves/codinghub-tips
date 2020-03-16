@@ -44,10 +44,6 @@ function Layout({ children }) {
       </div>
 
       <div>
-        <h2 className="title">
-          <div dangerouslySetInnerHTML={{ __html: `{ wee<span>tips</span> }` }} />
-        </h2>
-
         {manipulatedChildren}
       </div>
 

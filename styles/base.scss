@@ -7,14 +7,6 @@ body {
   &.dark {
     background: #010101;
 
-    .title {
-      color: #ddd;
-
-      span {
-        color: #fff;
-      }
-    }
-
     .theme-switch {
       color: #fff;
 
@@ -34,20 +26,6 @@ body {
         color: #666;
       }
     }
-  }
-}
-
-.title {
-  font-weight: 400;
-  text-align: center;
-  margin-top: 80px;
-  font-size: 38px;
-  letter-spacing: -3px;
-  color: #666;
-
-  span {
-    font-weight: 700;
-    color: #222;
   }
 }
 
@@ -72,7 +50,7 @@ body {
 
 .tip-content {
   width: 50%;
-  margin: 80px auto;
+  margin: 15vh auto 0;
   position: relative;
 
   h3 {

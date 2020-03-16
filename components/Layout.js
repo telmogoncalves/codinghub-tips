@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { Moon, Sun } from 'react-feather'
 
+import { FAVICON } from '../constants/AppConstants'
+
 function Layout({ children }) {
   const [darkMode, setDarkMode] = useState()
   const [mounted, setMounted] = useState(false)
@@ -32,8 +34,9 @@ function Layout({ children }) {
   return (
     <div className={`theme--${darkMode ? `dark` : 'light'}`}>
       <Head>
+        <link rel="icon" href={FAVICON} />
         <link rel="stylesheet" href="https://use.typekit.net/hxw8tgn.css" />
-        <title>🔥 Wee Tips</title>
+        <title>Wee Tips</title>
       </Head>
 
       <div className="theme-switch" onClick={() => setDarkMode(!darkMode)}>

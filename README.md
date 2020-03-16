@@ -6,6 +6,7 @@
    ```
    ---
    title: "Title for your tip"
+   language: "javascript"
    ---
 
    // Your tip code goes here

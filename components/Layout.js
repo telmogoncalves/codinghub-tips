@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
-import { Moon, Sun, Menu, Repeat } from 'react-feather'
+import { Moon, Sun, Menu, Repeat, GitHub } from 'react-feather'
 
 import { FAVICON } from '../constants/AppConstants'
 
@@ -11,12 +11,17 @@ function Layout({ children }) {
 
   useEffect(() => {
     setDarkMode(window.localStorage.getItem('DARK_MODE') === 'true')
+    setListView(window.localStorage.getItem('LIST_VIEW') === 'true')
     setMounted(true)
   }, [])
 
   useEffect(() => {
     window.localStorage.setItem('DARK_MODE', darkMode)
   }, [darkMode])
+
+  useEffect(() => {
+    window.localStorage.setItem('LIST_VIEW', listView)
+  }, [listView])
 
   if (!mounted) return <div />
 
@@ -63,6 +68,10 @@ function Layout({ children }) {
       </div>
 
       <footer>
+        <a href="https://github.com/telmogoncalves/weetips" target="_blank">
+          <GitHub />
+        </a>
+        <br />
         Created by <a href="https://twitter.com/telmo" target="_blank">@telmo</a>
       </footer>
     </div>

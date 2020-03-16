@@ -80,7 +80,6 @@ body {
 
 
 .tip-content {
-  width: 50%;
   margin: 15vh auto 0;
   position: relative;
 
@@ -88,7 +87,6 @@ body {
     font-weight: 400;
     display: flex;
     align-items: center;
-    width: 100%;
 
     .language-tag {
       text-transform: uppercase;
@@ -121,7 +119,6 @@ body {
     color: #fff;
     margin: 40px auto;
     display: block;
-    width: 200px;
     padding: 15px 20px;
     border-radius: 6px;
     cursor: pointer;
@@ -152,18 +149,10 @@ footer {
   text-align: center;
   font-size: 13px;
   color: #ccc;
+  line-height: 1.8em;
 
   a {
     color: #999;
     text-decoration: none;
-  }
-}
-
-// Mobile & Tablets
-@media (max-width: 1024px) {
-  .tip-content {
-    width: 94%;
-    margin-left: 3%;
-    margin-right: 3%;
   }
 }

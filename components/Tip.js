@@ -3,6 +3,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import { anOldHope, github } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import { Copy, Check } from 'react-feather'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { Grid, Row, Col } from 'react-flexbox-grid'
 
 export default function Tip({ allTips, darkMode, listView }) {
   const random = () => allTips[Math.floor(Math.random() * allTips.length)]
@@ -52,10 +53,20 @@ export default function Tip({ allTips, darkMode, listView }) {
   )
 
   return (
-    listView ? (
-      allTips.map(tip => <TipContent tip={tip} key={tip.document.title} />)
-    ) : (
-      <TipContent tip={tip} />
-    )
+    <Grid>
+      <Row>
+        <Col md={8} mdOffset={2}>
+          {listView ? (
+            <Row>
+              {allTips.sort(() => { return .5 - Math.random() }).map(tip => (
+                <Col md={12}>
+                  <TipContent tip={tip} key={tip.document.title} />
+                </Col>
+              ))}
+            </Row>
+          ) : <TipContent tip={tip} />}
+        </Col>
+      </Row>
+    </Grid>
   )
 }

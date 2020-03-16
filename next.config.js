@@ -6,6 +6,7 @@ module.exports = withCSS(
   withSass(
     withTM({
       transpileModules: [
+        'react-flexbox-grid',
         'react-syntax-highlighter'
       ],
       webpack: function(config) {

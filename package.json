@@ -24,6 +24,7 @@
     "react-dom": "^16.13.0",
     "react-embed-gist": "^1.0.10",
     "react-feather": "^2.0.3",
+    "react-flexbox-grid": "^2.1.2",
     "react-syntax-highlighter": "^12.2.1"
   }
 }

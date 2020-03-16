@@ -26,11 +26,18 @@ body {
         color: #666;
       }
     }
+
+    .view-switch {
+      &:hover {
+        color: #ccc;
+        border-color: #ccc;
+      }
+    }
   }
 }
 
 .theme-switch {
-  position: absolute;
+  position: fixed;
   right: 15px;
   top: 15px;
   background: none;
@@ -44,6 +51,30 @@ body {
 
   svg {
     fill: #000;
+  }
+}
+
+.view-switch {
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  border: 1px #999 solid;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #999;
+  cursor: pointer;
+  cursor: hand;
+
+  svg {
+    margin-right: 5px;
+  }
+
+  &:hover {
+    border-color: #222;
+    color: #222;
   }
 }
 

@@ -5,15 +5,9 @@ import Layout from '../components/Layout'
 import Tip from '../components/Tip'
 
 function Homepage({ allTips }) {
-  const random = () => allTips[Math.floor(Math.random() * allTips.length)]
-  const randomizeTip = () => setTip(random())
-  const [tip, setTip] = useState(random())
-
-  const requiredProps = { ...tip, randomizeTip, theme: '' }
-
   return (
     <Layout>
-      <Tip {...requiredProps} />
+      <Tip allTips={allTips} />
     </Layout>
   )
 }

@@ -41,6 +41,27 @@ body {
         color: #777;
       }
     }
+
+    .logo {
+      .symbol {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.logo {
+  text-align: center;
+
+  .symbol {
+    font-size: 3em;
+  }
+
+  .label {
+    text-transform: uppercase;
+    color: #777;
+    font-size: 12px;
+    font-weight: 500;
   }
 }
 

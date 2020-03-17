@@ -42,8 +42,13 @@ function Layout({ children }) {
       <Head>
         <link rel="icon" href={FAVICON} />
         <link rel="stylesheet" href="https://use.typekit.net/hxw8tgn.css" />
-        <title>Wee Tips</title>
+        <title>CodingHub Tips</title>
       </Head>
+
+      <div className="logo">
+        <div className="symbol">⧩</div>
+        <div className="label">[ tips ]</div>
+      </div>
 
       <div className="view-switch" onClick={() => setListView(!listView)}>
         {listView ? (
@@ -68,7 +73,7 @@ function Layout({ children }) {
       </div>
 
       <footer>
-        <a href="https://github.com/telmogoncalves/weetips" target="_blank">
+        <a href="https://github.com/telmogoncalves/codinghub-tips" target="_blank">
           <GitHub />
         </a>
         <br />

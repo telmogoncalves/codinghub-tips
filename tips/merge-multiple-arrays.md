@@ -1,6 +1,7 @@
 ---
 title: "Merge multiple arrays"
 language: "javascript"
+twitter: "telmo"
 ---
 
 const frameworks = ['React', 'VueJS', 'Angular']

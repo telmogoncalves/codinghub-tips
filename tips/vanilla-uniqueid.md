@@ -1,6 +1,7 @@
 ---
 title: "Vanilla JS version of _.uniqueId"
 language: "javascript"
+twitter: "gbrlmngr"
 ---
 
 const uniqueId = (prefix = '', start = 0) => (step = 1) => `${prefix}${start += step}`;

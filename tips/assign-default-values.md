@@ -1,6 +1,7 @@
 ---
 title: "Assign default values while destructuring"
 language: "javascript"
+twitter: "telmo"
 ---
 
 const profile = {

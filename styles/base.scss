@@ -33,6 +33,14 @@ body {
         border-color: #ccc;
       }
     }
+
+    .added-by {
+      color: #444;
+
+      a {
+        color: #777;
+      }
+    }
   }
 }
 
@@ -85,11 +93,11 @@ body {
 
   .language-tag {
     text-transform: uppercase;
-    font-size: 11px;
-    font-weight: 500;
+    font-size: 10px;
+    font-weight: 600;
     border: 1px #1f7df8 solid;
     display: inline-block;
-    padding: 3px 8px;
+    padding: 5px 8px;
     border-radius: 4px;
     color: #1f7df8;
   }
@@ -154,6 +162,18 @@ footer {
 
   a {
     color: #999;
+    text-decoration: none;
+  }
+}
+
+.added-by {
+  text-align: right;
+  font-size: 11px;
+  color: #bbb;
+  padding-right: 10px;
+
+  a {
+    color: #888;
     text-decoration: none;
   }
 }

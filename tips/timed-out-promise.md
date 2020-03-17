@@ -1,6 +1,7 @@
 ---
 title: "Timed out Promise using Promise.race"
 language: "javascript"
+twitter: "gbrlmngr"
 ---
 
 function networkRequest() {

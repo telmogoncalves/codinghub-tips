@@ -1,6 +1,7 @@
 ---
 title: "Destructure object using rest"
 language: "javascript"
+twitter: "telmo"
 ---
 
 const profile = {

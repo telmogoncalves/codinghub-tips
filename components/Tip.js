@@ -19,7 +19,7 @@ export default function Tip({ allTips, darkMode, listView }) {
     tip: {
       document: {
         content,
-        data: { title, language }
+        data: { title, language, twitter }
       }
     }
   }) => (
@@ -44,6 +44,13 @@ export default function Tip({ allTips, darkMode, listView }) {
       <SyntaxHighlighter language={language} style={darkMode ? anOldHope : github}>
         {content}
       </SyntaxHighlighter>
+
+      <div className="added-by">
+        Added by {' '}
+        <a href={`https://twitter.com/${twitter}`} target="_blank">
+          @{twitter}
+        </a>
+      </div>
 
       {!listView && (
         <button onClick={() => randomizeTip()}>

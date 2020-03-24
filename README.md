@@ -8,6 +8,7 @@
    title: "Title for your tip"
    language: "javascript"
    twitter: "<your twitter handle without the @>"
+   createdAt: "<ADD IF YOU WANT A "new" FLAG ON YOUR TIP>"
    ---
 
    // Your tip code goes here

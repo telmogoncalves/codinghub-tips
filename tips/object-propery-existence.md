@@ -6,9 +6,9 @@ createdAt: '2020-03-24'
 ---
 
 const details = {
-social: {
-twitter: "@steveariss"
-}
+  social: {
+    twitter: "@steveariss"
+  }
 };
 
 const facebook = details.social?.facebook;

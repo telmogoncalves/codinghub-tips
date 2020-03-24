@@ -1,7 +1,7 @@
 ---
 title: "Convert hex number to decimal number and visa versa"
 language: "javascript"
-twitter: "@rolandjlevy"
+twitter: "rolandjlevy"
 ---
 
 const hexToDec = n => parseInt(n, 16).toString(10);

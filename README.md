@@ -7,7 +7,7 @@
    ---
    title: "Title for your tip"
    language: "javascript"
-   twitter: "<your twitter handle>"
+   twitter: "<your twitter handle without the @>"
    ---
 
    // Your tip code goes here

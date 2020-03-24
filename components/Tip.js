@@ -5,10 +5,7 @@ import { Copy, Check } from 'react-feather'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 
-export default function Tip({ allTips, darkMode, listView }) {
-  const random = () => allTips[Math.floor(Math.random() * allTips.length)]
-  const randomizeTip = () => setTip(random())
-  const [tip, setTip] = useState(random())
+export default function Tip({ allTips, darkMode }) {
   const [copied, setCopied] = useState(false)
   const copiedDelay = () => {
     setCopied(true)
@@ -51,12 +48,6 @@ export default function Tip({ allTips, darkMode, listView }) {
           @{twitter}
         </a>
       </div>
-
-      {!listView && (
-        <button onClick={() => randomizeTip()}>
-          Get another
-        </button>
-      )}
     </div>
   )
 
@@ -64,15 +55,13 @@ export default function Tip({ allTips, darkMode, listView }) {
     <Grid>
       <Row>
         <Col md={8} mdOffset={2}>
-          {listView ? (
-            <Row>
-              {allTips.sort(() => { return .5 - Math.random() }).map(tip => (
-                <Col md={12}>
-                  <TipContent tip={tip} key={tip.document.title} />
-                </Col>
-              ))}
-            </Row>
-          ) : <TipContent tip={tip} />}
+          <Row>
+            {allTips.map((tip, index) => (
+              <Col md={12} key={index}>
+                <TipContent tip={tip} key={tip.document.title} />
+              </Col>
+            ))}
+          </Row>
         </Col>
       </Row>
     </Grid>

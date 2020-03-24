@@ -27,13 +27,6 @@ body {
       }
     }
 
-    .view-switch {
-      &:hover {
-        color: #ccc;
-        border-color: #ccc;
-      }
-    }
-
     .added-by {
       color: #444;
 
@@ -83,33 +76,9 @@ body {
   }
 }
 
-.view-switch {
-  position: fixed;
-  left: 15px;
-  top: 15px;
-  font-size: 11px;
-  display: flex;
-  align-items: center;
-  border: 1px #999 solid;
-  padding: 5px 10px;
-  border-radius: 4px;
-  color: #999;
-  cursor: pointer;
-  cursor: hand;
-
-  svg {
-    margin-right: 5px;
-  }
-
-  &:hover {
-    border-color: #222;
-    color: #222;
-  }
-}
-
 
 .tip-content {
-  margin: 15vh auto 0;
+  margin: 0 auto 15vh;
   position: relative;
 
   .language-tag {
@@ -196,5 +165,37 @@ footer {
   a {
     color: #888;
     text-decoration: none;
+  }
+}
+
+.categories {
+  margin: 80px 0;
+
+  button {
+    border: none;
+    border: 1px #ccc solid;
+    text-transform: uppercase;
+    font-family: $font-family;
+    font-weight: 500;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 3px 10px;
+    color: #999;
+    cursor: pointer;
+    cursor: hand;
+    outline: 0;
+    background: none;
+
+    &:hover {
+      color: #555;
+      border-color: #555;
+    }
+
+    &.active {
+      color: #fff;
+      background: #1f7df8;
+      border-color: #1f7df8;
+    }
   }
 }

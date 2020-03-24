@@ -1,27 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
-import { Moon, Sun, Menu, Repeat, GitHub } from 'react-feather'
+import { Moon, Sun, GitHub } from 'react-feather'
 
 import { FAVICON } from '../constants/AppConstants'
 
 function Layout({ children }) {
   const [darkMode, setDarkMode] = useState()
   const [mounted, setMounted] = useState(false)
-  const [listView, setListView] = useState(false)
 
   useEffect(() => {
     setDarkMode(window.localStorage.getItem('DARK_MODE') === 'true')
-    setListView(window.localStorage.getItem('LIST_VIEW') === 'true')
     setMounted(true)
   }, [])
 
   useEffect(() => {
     window.localStorage.setItem('DARK_MODE', darkMode)
   }, [darkMode])
-
-  useEffect(() => {
-    window.localStorage.setItem('LIST_VIEW', listView)
-  }, [listView])
 
   if (!mounted) return <div />
 
@@ -34,7 +28,7 @@ function Layout({ children }) {
   }
 
   const manipulatedChildren = React.Children.map(children, child => {
-    return React.cloneElement(child, { darkMode, listView });
+    return React.cloneElement(child, { darkMode });
   })
 
   return (
@@ -48,20 +42,6 @@ function Layout({ children }) {
       <div className="logo">
         <div className="symbol">⧩</div>
         <div className="label">[ tips ]</div>
-      </div>
-
-      <div className="view-switch" onClick={() => setListView(!listView)}>
-        {listView ? (
-          <>
-            <Repeat size={13} />
-            Random
-          </>
-        ) : (
-          <>
-            <Menu size={13} />
-            List
-          </>
-        )}
       </div>
 
       <div className="theme-switch" onClick={() => setDarkMode(!darkMode)}>

@@ -16,40 +16,57 @@ export default function Tip({ allTips, darkMode }) {
     tip: {
       document: {
         content,
-        data: { title, language, twitter }
+        data: { title, language, twitter, createdAt }
       }
     }
-  }) => (
-    <div className="tip-content">
-      <span className="language-tag">
-        {language}
-      </span>
+  }) => {
+    const isNew = () => {
+      const tipDate = new Date(createdAt).getTime()
+      const twoDaysAgo = new Date().getTime()
 
-      <h3>
-        {title}
-      </h3>
+      return twoDaysAgo - tipDate < (60 * 60 * 1000 * 24 * 2) // 2 days old
+    }
 
-      <div className="copy-to-clipboard">
-        <CopyToClipboard
-          text={content}
-          onCopy={() => copiedDelay()}
-        >
-          {copied ? <Check color="#84ffb5" /> : <Copy />}
-        </CopyToClipboard>
+    return (
+      <div className="tip-content">
+        <div className="language-tag">
+          <span>
+            {language}
+          </span>
+        </div>
+
+        <h3>
+          {title}
+        </h3>
+
+        {isNew() && (
+          <div className="new-tip">
+            NEW
+          </div>
+        )}
+
+        <div className="copy-to-clipboard">
+          <CopyToClipboard
+            text={content}
+            onCopy={() => copiedDelay()}
+          >
+            {copied ? <Check color="#84ffb5" /> : <Copy />}
+          </CopyToClipboard>
+        </div>
+
+        <SyntaxHighlighter language={language} style={darkMode ? anOldHope : github}>
+          {content}
+        </SyntaxHighlighter>
+
+        <div className="added-by">
+          Added by {' '}
+          <a href={`https://twitter.com/${twitter}`} target="_blank">
+            @{twitter}
+          </a>
+        </div>
       </div>
-
-      <SyntaxHighlighter language={language} style={darkMode ? anOldHope : github}>
-        {content}
-      </SyntaxHighlighter>
-
-      <div className="added-by">
-        Added by {' '}
-        <a href={`https://twitter.com/${twitter}`} target="_blank">
-          @{twitter}
-        </a>
-      </div>
-    </div>
-  )
+    )
+  }
 
   return (
     <Grid>

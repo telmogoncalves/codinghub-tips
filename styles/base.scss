@@ -17,6 +17,17 @@ body {
       h3 {
         color: #fff;
       }
+
+      .language-tag {
+        span {
+          background: #010101;
+          box-shadow: 0 0 0 6px #010101;
+        }
+      }
+
+      .new-tip {
+        box-shadow: 0 0 0 6px #010101;
+      }
     }
 
     footer {
@@ -82,21 +93,28 @@ body {
   position: relative;
 
   .language-tag {
-    text-transform: uppercase;
-    font-size: 10px;
-    font-weight: 600;
-    border: 1px #1f7df8 solid;
-    display: inline-block;
-    padding: 5px 8px;
-    border-radius: 4px;
-    color: #1f7df8;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 40px;
+
+    span {
+      border: 1px #1f7df8 solid;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 600;
+      display: inline-block;
+      padding: 5px 8px;
+      border-radius: 4px;
+      color: #1f7df8;
+      background: #fff;
+      box-shadow: 0 0 0 6px #fff;
+    }
   }
 
   h3 {
     font-weight: 400;
-    display: flex;
-    align-items: center;
-    margin: 10px 0 0;
+    margin: 10px 0 30px;
   }
 
   pre {
@@ -133,7 +151,7 @@ body {
 .copy-to-clipboard {
   position: absolute;
   right: 15px;
-  top: 85px;
+  top: 70px;
   cursor: pointer;
   cursor: hand;
   color: #999;
@@ -144,15 +162,22 @@ body {
 }
 
 footer {
-  margin-top: 50px;
-  text-align: center;
   font-size: 13px;
   color: #ccc;
   line-height: 1.8em;
+  position: fixed;
+  top: 45%;
+  padding-left: 20px;
 
   a {
     color: #999;
     text-decoration: none;
+    display: block;
+    padding: 5px 0;
+
+    &:hover {
+      color: #1f7df8;
+    }
   }
 }
 
@@ -196,6 +221,33 @@ footer {
       color: #fff;
       background: #1f7df8;
       border-color: #1f7df8;
+    }
+  }
+}
+
+.new-tip {
+  position: absolute;
+  right: -20px;
+  top: 55%;
+  color: #fff;
+  background: #f5222d;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 13px;
+  box-shadow: 0 0 0 6px #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    top: 20px;
+    width: 100px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    a {
+      display: inline-block;
+      padding-right: 15px;
     }
   }
 }

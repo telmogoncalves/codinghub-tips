@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
-import { Moon, Sun, GitHub } from 'react-feather'
+import { Moon, Sun, GitHub, Twitter } from 'react-feather'
 
 import { FAVICON } from '../constants/AppConstants'
 
@@ -56,8 +56,10 @@ function Layout({ children }) {
         <a href="https://github.com/telmogoncalves/codinghub-tips" target="_blank">
           <GitHub />
         </a>
-        <br />
-        Created by <a href="https://twitter.com/telmo" target="_blank">@telmo</a>
+
+        <a href="https://twitter.com/telmo" target="_blank">
+          <Twitter />
+        </a>
       </footer>
     </div>
   )

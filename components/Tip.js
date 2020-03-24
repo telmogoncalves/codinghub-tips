@@ -29,34 +29,38 @@ export default function Tip({ allTips, darkMode }) {
 
     return (
       <div className="tip-content">
-        <div className="language-tag">
-          <span>
-            {language}
-          </span>
-        </div>
-
         <h3>
           {title}
         </h3>
 
-        {isNew() && (
-          <div className="new-tip">
-            NEW
+        <div className="code-container">
+          <div className="language-tag">
+            <span>
+              {language}
+            </span>
           </div>
-        )}
 
-        <div className="copy-to-clipboard">
-          <CopyToClipboard
-            text={content}
-            onCopy={() => copiedDelay()}
-          >
-            {copied ? <Check color="#84ffb5" /> : <Copy />}
-          </CopyToClipboard>
+          <div className="copy-to-clipboard">
+            <CopyToClipboard
+              text={content}
+              onCopy={() => copiedDelay()}
+            >
+              {copied ? <Check color="#84ffb5" /> : <Copy />}
+            </CopyToClipboard>
+          </div>
+
+          {isNew() && (
+            <div className="new-tip">
+              <span>
+                NEW
+              </span>
+            </div>
+          )}
+
+          <SyntaxHighlighter language={language} style={darkMode ? anOldHope : github}>
+            {content}
+          </SyntaxHighlighter>
         </div>
-
-        <SyntaxHighlighter language={language} style={darkMode ? anOldHope : github}>
-          {content}
-        </SyntaxHighlighter>
 
         <div className="added-by">
           Added by {' '}

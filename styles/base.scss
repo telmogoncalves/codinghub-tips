@@ -26,7 +26,9 @@ body {
       }
 
       .new-tip {
-        box-shadow: 0 0 0 6px #010101;
+        span {
+          box-shadow: 0 0 0 6px #010101;
+        }
       }
     }
 
@@ -87,6 +89,15 @@ body {
   }
 }
 
+.code-container {
+  position: relative;
+
+  &:hover {
+    .copy-to-clipboard {
+      display: block;
+    }
+  }
+}
 
 .tip-content {
   margin: 0 auto 15vh;
@@ -96,7 +107,7 @@ body {
     position: absolute;
     width: 100%;
     text-align: center;
-    top: 40px;
+    top: -10px;
 
     span {
       border: 1px #1f7df8 solid;
@@ -151,10 +162,11 @@ body {
 .copy-to-clipboard {
   position: absolute;
   right: 15px;
-  top: 70px;
+  top: 20px;
   cursor: pointer;
   cursor: hand;
   color: #999;
+  display: none;
 
   &:hover {
     color: #000;
@@ -227,23 +239,32 @@ footer {
 
 .new-tip {
   position: absolute;
-  right: -20px;
-  top: 55%;
-  color: #fff;
-  background: #f5222d;
-  border-radius: 4px;
-  padding: 4px 10px;
-  font-size: 13px;
-  box-shadow: 0 0 0 6px #fff;
+  width: 100%;
+  text-align: center;
+  bottom: -10px;
+  z-index: 9999;
+
+  span {
+    color: #fff;
+    background: #f5222d;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 13px;
+    box-shadow: 0 0 0 6px #fff;
+  }
 }
 
 @media only screen and (max-width: 600px) {
+  .copy-to-clipboard {
+    display: block;
+  }
+
   footer {
     top: 20px;
     width: 100px;
-    padding: 0;
     display: flex;
     align-items: center;
+    position: absolute;
 
     a {
       display: inline-block;

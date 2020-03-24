@@ -1,13 +1,13 @@
 ---
-title: "Deep check an poo with Optional Chaining"
-language: "javascript"
-twitter: "steveariss"
+title: 'Deep check for an object property existence with Optional Chaining'
+language: 'javascript'
+twitter: 'steveariss'
 ---
 
 const details = {
-  social: {
-    twitter: "@steveariss"
-  }
+social: {
+twitter: "@steveariss"
+}
 };
 
 const facebook = details.social?.facebook;

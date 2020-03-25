@@ -1,6 +1,6 @@
 ---
 title: "Exec Command in Node.Js"
-language: "Javascript"
+language: "javascript"
 twitter: "avishekp86"
 ---
 //Use 'exec' method of 'child_process' to execute any shell commands 

@@ -1,5 +1,6 @@
 # How to contribute?
 
+1. Fork this Repository
 1. Check how we handle tips in the files under `./tips/`
 1. If you tip is something like **Remove Duplicates from array** name the file as `remove-duplicates-array.md`
 1. Format should be as follow:

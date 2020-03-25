@@ -1,6 +1,6 @@
 ---
 title: "Generalizing async return type"
-language: "csharp"
+language: "c#"
 twitter: "avishekp86"
 ---
 

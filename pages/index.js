@@ -61,7 +61,7 @@ function Homepage({ allTips }) {
         </Row>
       </Grid>
 
-      {!filteredTips.length ? (
+      {filteredTips.length ? (
         <Tip allTips={filteredTips.sort(() => { return .5 - Math.random() })} />
       ) : (
         <div className="empty">

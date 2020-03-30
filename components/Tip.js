@@ -4,6 +4,15 @@ import { anOldHope, github } from 'react-syntax-highlighter/dist/esm/styles/hljs
 import { Copy, Check } from 'react-feather'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Grid, Row, Col } from 'react-flexbox-grid'
+import simpleIcons from 'simple-icons'
+
+const mappedIcons = {
+  javascript: 'JavaScript',
+  html: 'HTML5',
+  git: 'Git',
+  css: 'CSS3',
+  'c#': 'C++'
+}
 
 export default function Tip({ allTips, darkMode }) {
   const [copied, setCopied] = useState(false)
@@ -26,6 +35,7 @@ export default function Tip({ allTips, darkMode }) {
 
       return twoDaysAgo - tipDate < (60 * 60 * 1000 * 24 * 2) // 2 days old
     }
+    const icon = simpleIcons.get(mappedIcons[language.toLowerCase()])
 
     return (
       <div className="tip-content">
@@ -36,7 +46,14 @@ export default function Tip({ allTips, darkMode }) {
         <div className="code-container">
           <div className="language-tag">
             <span>
-              {language}
+              {icon ? (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: icon.svg
+                  }}
+                  style={{ fill: `#${icon.hex}` }}
+                />
+              ) : language}
             </span>
           </div>
 

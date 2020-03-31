@@ -1,7 +1,7 @@
 ---
 title: "Style Odd and Event child elements"
-language: "html",
-twitter: "telmo",
+language: "html"
+twitter: "telmo"
 createdAt: "2020-03-31"
 ---
 

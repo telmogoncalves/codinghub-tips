@@ -1,7 +1,7 @@
 ---
 title: "Format arrays with Intl.ListFormat"
 language: "javascript"
-twitter: "telmo",
+twitter: "telmo"
 createdAt: "2020-03-31"
 ---
 

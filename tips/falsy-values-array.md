@@ -6,4 +6,4 @@ twitter: "telmo"
 
 const array = [false, 'NextJS', undefined, 'React', null]
 
-arr.filter(Boolean) // ['NextJS', 'React']
+array.filter(Boolean) // ['NextJS', 'React']

@@ -14,7 +14,7 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "gray-matter": "^4.0.2",
-    "next": "^9.3.2",
+    "next": "^11.1.0",
     "next-compose-plugins": "^2.2.0",
     "next-transpile-modules": "^2.3.1",
     "node-sass": "^4.13.1",

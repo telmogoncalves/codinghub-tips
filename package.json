@@ -17,7 +17,7 @@
     "next": "^9.3.2",
     "next-compose-plugins": "^2.2.0",
     "next-transpile-modules": "^2.3.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "raw-loader": "^4.0.0",
     "react": "^16.13.0",
     "react-copy-to-clipboard": "^5.0.2",
